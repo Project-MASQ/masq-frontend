@@ -1,0 +1,38 @@
+.table-list-employ {
+    .ant-table-thead {
+        tr {
+            th {
+                background-color: #fff;
+                color: #909399;
+                font-weight: bold;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .ant-table-tbody {
+        max-height: 10vh;
+        overflow: auto;
+        tr {
+            td {
+                padding: 12px;
+            }
+        }
+    }
+
+    .ant-switch {
+        min-width: 40px;
+        height: 20px;
+        .ant-switch-handle {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .ant-switch-checked {
+        .ant-switch-handle {
+            left: calc(100% - 18px - 0px);
+        }
+    }
+
+}

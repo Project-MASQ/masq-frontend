@@ -1,0 +1,14 @@
+@import "./assets/scss/variables";
+
+.ant-input {
+    line-height: 2.2 !important;
+    border-radius: 2px;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.ant-btn {
+    height: 40px;
+    border-radius: 4px;
+}

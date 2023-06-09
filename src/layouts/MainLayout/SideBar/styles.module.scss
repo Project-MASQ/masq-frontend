@@ -1,0 +1,323 @@
+.sideBarWrap {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.5s;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 30%);
+    background-color: #1e1e2d;
+    color: #fff;
+    font-size: 16px;
+    z-index: 100;
+    .logoWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        height: 70px;
+        transition: all 0.5s;
+        overflow: hidden;
+        background-color: #1b1b28;
+        border-bottom: 1px solid rgb(46 46 46 / 69%);
+        position: relative;
+        .imgWrap {
+            width: 150px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .btnToggleSideBar {
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.5s;
+            position: absolute;
+            top: 22px;
+            right: 13px;
+        }
+
+        .btnToggleSideBarMobi {
+            display: none;
+        }
+
+        .btnToggleSideBarClose {
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.5s;
+            transform: rotateY(-180deg);
+        }
+    }
+
+    .navbarWrap {
+        height: calc(100vh - 70px);
+        transition: all 0.5s;
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+        .menuNav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            font-size: 14px;
+            .menuSession {
+                color: rgba(119, 111, 111, 0.68);
+            }
+            .menuNavItem {
+                width: 100%;
+                color: #9899ac;
+                background-color: #1e1e2d;
+                transition: all 0.3s;
+                overflow:hidden;
+                &:hover {
+                    color: #fff;
+                    background-color: rgba(69, 125, 178, 0.76);
+                }
+
+                .contentNavItemWrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 15px;
+                    .textWrap {
+                        display: flex;
+                        justify-content: flex-start;
+                        .text {
+                            margin-left: 10px;
+                            clear: both;
+                            display: inline-block;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                    .btnDrop {
+                        font-size: 11px;
+                        transition: all 0.3s;
+                    }
+                }
+
+                .menuSub {
+                    list-style: none;
+                    max-height: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    transition: all 0.2s;
+
+                    .menuSubItem {
+                        width: 100%;
+                        background-color: #1e1e2d;
+                        color: #9899ac;
+                        transition: all 0.3s;
+                        &:hover {
+                            color: #fff;
+                            background-color: rgba(69,125,178,.3019607843);
+                        }
+
+                        .contentSubItemWrap {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            cursor: pointer;
+                            padding: 15px 15px 15px 35px;
+
+                            .textWrap {
+                                display: flex;
+                                justify-content: flex-start;
+                                .text {
+                                    margin-left: 10px;
+                                    clear: both;
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                }
+                            }
+                            .btnDrop {
+                                transition: 0.3s;
+                                font-size: 11px;
+                            }
+                        }
+
+                        .menuSubItemActive {
+                            background-color: rgba(69,125,178,.3019607843);
+                            color: #fff;
+                            transition: 0.5s;
+                            .btnDrop {
+                                transition: 0.5s;
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        .menuSubNav {
+                            list-style: none;
+                            max-height: 0;
+                            padding: 0;
+                            overflow: hidden;
+                            transition: all 0.2s;
+
+                            .menuSubNavItem {
+                                width: 100%;
+                                background-color: #1e1e2d;
+                                color: #9899ac;
+                                transition: all 0.3s;
+                                &:hover {
+                                    color: #fff;
+                                    background-color: rgba(69,125,178,.3019607843);
+                                }
+                                .contentSubNavItemWrap {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    padding: 15px 15px 15px 55px;
+                                    .textWrap {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        .text {
+                                            margin-left: 10px;
+                                            clear: both;
+                                            display: inline-block;
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                }
+
+                                .menuSubFoSubItemActive {
+                                    background-color: rgba(69,125,178,.3019607843);
+                                    .textWrap {
+                                        color: #fff;
+                                        transition: 0.5s;
+                                    }
+                                }
+                            }
+                        }
+
+                        .menuSubForSubItemActive {
+                            width: 100%;
+                            max-height: 80vh;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            transition: all 0.5s;
+                            &::-webkit-scrollbar {
+                                width: 7px;
+                                transition: all 2s;
+                            }
+                            &::-webkit-scrollbar-track {
+                                background: rgba(217, 219, 226, 0);
+                                border-radius: 5px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background: rgba(217, 219, 226, 0);
+                                border-radius: 8px;
+                                transition: all 2s;
+                            }
+                        }
+                    }
+                }
+
+                .menuSubActive {
+                    width: 100%;
+                    max-height: 80vh;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    transition: all 0.5s;
+                    &::-webkit-scrollbar {
+                        width: 7px;
+                        transition: all 2s;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: rgba(217, 219, 226, 0);
+                        border-radius: 5px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: rgba(217, 219, 226, 0);
+                        border-radius: 8px;
+                        transition: all 2s;
+                    }
+                }
+            }
+
+            .menuSessionItem {
+                width: 100%;
+                color: #9899ac;
+                background-color: #1e1e2d;
+                padding: 10px 15px 0;
+                clear: both;
+                overflow: hidden;
+                white-space: nowrap;
+                text-transform: capitalize;
+                margin-bottom: 5px;
+            }
+
+            .menuNavItemActive {
+                background-color: rgba(69,125,178,.3019607843);
+                .contentNavItemWrap {
+                    color: #fff;
+                    transition: 0.5s;
+                    .btnDrop {
+                        transition: 0.3s;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 7px;
+            transition: all 2s;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(217, 219, 226, 0);
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgba(217, 219, 226, 0);
+            border-radius: 8px;
+            transition: all 2s;
+        }
+
+        &:hover::-webkit-scrollbar-thumb:vertical {
+            background-color: rgba(119, 111, 111, 0.68);
+        }
+
+        &::-webkit-scrollbar-thumb:vertical:hover {
+            background-color: rgba(133, 133, 133, 0.68);
+        }
+    }
+
+    .navbarWrap:hover {
+        overflow-y: auto;
+    }
+}
+
+.sideBarWrapClose {
+    width: 64px;
+    .navbarWrap {
+        .menuNav {
+            .menuNavItem {
+                .contentNavItemWrap {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sideBarWrap {
+        width: 100vw;
+        .logoWrap {
+            .btnToggleSideBarMobi {
+                display: block;
+            }
+
+            .imgWrapDesktop {
+                display: none;
+            }
+        }
+    }
+    .sideBarWrapClose {
+        width: 0;
+        overflow: hidden;
+    }
+}

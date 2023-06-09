@@ -1,0 +1,57 @@
+@import "../../../assets/scss/variables";
+.informationWrap {
+    margin-bottom: 20px;
+    .titleWrap {
+        font-size: 14px;
+        font-weight: 400;
+        p {
+            margin-bottom: 0;
+        }
+        .text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .description {
+            color: #99a6ad;
+        }
+    }
+
+    .formUpdateWrap {
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+        .inputWrap {
+            width: 100%;
+            margin-bottom: 10px;
+
+            .labelWrap {
+                font-weight: 600;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+
+            .required {
+                color: $colorError;
+            }
+
+            .input {
+                margin-bottom: 5px;
+            }
+
+            .error {
+                color: $colorError;
+            }
+        }
+
+        .btnWrap {
+            display: flex;
+            justify-content: flex-end;
+            .btnSave {
+                min-width: 80px;
+                border: none;
+            }
+        }
+    }
+}
