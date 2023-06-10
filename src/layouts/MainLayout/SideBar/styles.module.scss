@@ -20,7 +20,8 @@
         border-bottom: 1px solid rgb(46 46 46 / 69%);
         position: relative;
         .imgWrap {
-            width: 150px;
+            width: 130px;
+            height: 29px;
             img {
                 width: 100%;
             }
@@ -78,7 +79,7 @@
                     justify-content: space-between;
                     align-items: center;
                     cursor: pointer;
-                    padding: 15px;
+                    padding: 20px;
                     .textWrap {
                         display: flex;
                         justify-content: flex-start;

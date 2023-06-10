@@ -11,7 +11,7 @@ import {
     DownOutlined,
     MenuFoldOutlined
 } from "@ant-design/icons";
-import Logo from 'assets/images/Logo/zent_logo_light.png';
+import Logo from 'assets/images/Logo/logo-sidebar.png';
 import IconLogo from 'assets/images/Logo/icon-zent-v2.png';
 import {setIsShowSideBar} from "../../../state/modules/app";
 import glasess from '../../../assets/images/Icon/glasses.png';

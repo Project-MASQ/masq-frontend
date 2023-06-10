@@ -17,7 +17,6 @@ HomePage.defaultProps = {
 function HomePage () {
     const dispatch = useDispatch();
     useEffect(() => {
-        console.log('sdsdsdsd')
         let dataBreadCrumb = [
             {
                 route: ROUTE_HOME,
@@ -29,7 +28,12 @@ function HomePage () {
 
   return (
     <MainLayout>
-      <div>Home Page</div>
+      <div className={`p-[80px]`}>
+          <div className={`uppercase text-3xl font-medium leading-10`}>
+              Welcome back, <br/>
+              Lien To
+          </div>
+      </div>
     </MainLayout>
   );
 }
