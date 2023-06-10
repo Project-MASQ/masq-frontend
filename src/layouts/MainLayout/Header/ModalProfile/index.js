@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from "./styles.module.scss";
+import {useDispatch} from "react-redux";
+import {goToPage, ROUTE_PROFILE} from "../../../../state/modules/routing";
 
 function ModalProfile () {
+    const dispatch = useDispatch();
     return (
         <div className={styles.modalInfoWrap}>
             <div className={styles.mainModalInfoWrap}>
                 <ul className={styles.menuInfoWrap}>
-                    <li className={styles.itemInfoWrap}>
+                    <li onClick={() => dispatch(goToPage(ROUTE_PROFILE))} className={styles.itemInfoWrap}>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0 1c-3.375 0-5 2.106-5 3.333V11a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.667C11 9.106 9.375 7 6 7Z" fill="#fff"/>
                         </svg>

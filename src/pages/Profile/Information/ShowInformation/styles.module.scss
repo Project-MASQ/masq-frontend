@@ -1,0 +1,117 @@
+.informationWrap {
+    .breakWrap {
+        margin-top: 18px;
+        border-top: 1px solid #D2D6E5;
+    }
+
+    .breakDashedWrap {
+        border-top: 1px dashed #D2D6E5;
+    }
+
+    .titleWrap {
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 18px;
+        p {
+            margin-bottom: 0;
+        }
+        .text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .description {
+            color: #000000;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 34px;
+        }
+    }
+
+    .formUpdateWrap {
+        background-color: #fff;
+        padding: 22px;
+        border-radius: 4px;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+        .headerWrap {
+            .infoWrap {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                .avatarWrap {
+                    width: 36px;
+                    height: 36px;
+                    background-color: #EBEDF3;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .info {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #3D4667;
+                    margin-right: 4px;
+                    p {
+                        line-height: 1.2;
+                    }
+                    .name {;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .roll {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .personalInformationWrap,.officeInformationWrap {
+                padding: 16px 0;
+                .headerWrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 14px;
+                    .text {
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                    .btnWrap {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        color: #3D4667;
+                        font-weight: 500;
+                        font-size: 14px;
+                        cursor: pointer;
+                        svg {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .mainWrap {
+                    width: 100%;
+                    .itemInfoWrap {
+                        margin-bottom: 17px;
+                        .label {
+                            font-weight: 600;
+                            font-size: 14px;
+                            color: #5E6E99;
+                        }
+                        .text {
+                            font-weight: 600;
+                            font-size: 14px;
+                            color: #363E59;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
