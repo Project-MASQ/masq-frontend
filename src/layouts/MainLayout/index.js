@@ -7,11 +7,13 @@ import Footer from './Footer';
 import {useDispatch, useSelector} from "react-redux";
 import {setIsShowSideBar} from "../../state/modules/app";
 import BreadCrumb from "./BreadCrumb";
+import {ROUTE_HOME} from "../../state/modules/routing";
 
 const MainLayout = (props) => {
     /* State */
     const isShowSideBar = useSelector(state => state.app.isShowSideBar);
     const breadcrumb = useSelector(state => state.app.breadcrumb);
+    const currentRoute = useSelector(state => state.location.type);
     const dispatch = useDispatch();
 
     /* Hook */
@@ -33,7 +35,7 @@ const MainLayout = (props) => {
     }
 
 	return (
-        <div className={styles.boxMainLayout}>
+        <div className={`${styles.boxMainLayout} ${currentRoute === ROUTE_HOME ? styles.boxMainLayoutShowBackGround : ''}`}>
             <div className={styles.headerBox}></div>
             <div className={styles.mainLayoutWrap}>
                 <SideBar

@@ -1,10 +1,6 @@
 @import "../../assets/scss/variables";
 .boxMainLayout {
-    background-color: #f2f4f7;
-    background-image: url("../../../src/assets/images/Background/background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #E2E2E2;
     .headerBox {
         height: 60px;
         background: #ffffff;
@@ -16,6 +12,14 @@
         background: #2F4858;
         margin-top: -60px;
     }
+}
+
+.boxMainLayoutShowBackGround {
+    background-color: #f2f4f7;
+    background-image: url("../../../src/assets/images/Background/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .mainLayoutWrap {
     max-width: 1024px;
@@ -30,7 +34,7 @@
             height: calc(100% - 60px - 60px);
             overflow-y: auto;
             background-color: #f2f4f700;
-            //padding: 10px 15px;
+            padding: 30px 0 30px 38px;
 
             &::-webkit-scrollbar {
                 width: 7px;
