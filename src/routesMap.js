@@ -2,7 +2,8 @@ import {NOT_FOUND} from 'redux-first-router';
 import {
     ROUTE_AUTH,
     ROUTE_HOME,
-    ROUTE_PROFILE
+    ROUTE_PROFILE,
+    ROUTE_RESET_PASSWORD
 } from './state/modules/routing';
 import {loadHomePage} from './state/modules/home/saga';
 import {loadAuthPage} from "./state/modules/auth/saga";
@@ -20,6 +21,11 @@ const routeMap = {
     },
     [ROUTE_AUTH]: {
         path: '/login',
+        component: 'Auth',
+        saga: loadAuthPage
+    },
+    [ROUTE_RESET_PASSWORD]: {
+        path: '/reset-password',
         component: 'Auth',
         saga: loadAuthPage
     },
