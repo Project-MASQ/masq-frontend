@@ -1,5 +1,6 @@
 export const ROUTE_HOME = 'route/ROUTE_HOME';
 export const ROUTE_AUTH = 'route/ROUTE_AUTH';
+export const ROUTE_RESET_PASSWORD = 'route/RESET_PASSWORD';
 export const ROUTE_PROFILE = 'route/ROUTE_PROFILE';
 export const ROUTE_OWNER_FRAME = 'route/ROUTE_OWNER_FRAME';
 export const ROUTE_PATIENT_ORDER = 'route/ROUTE_PATIENT_ORDER';
