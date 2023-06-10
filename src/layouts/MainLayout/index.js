@@ -16,7 +16,7 @@ const MainLayout = (props) => {
 
     /* Hook */
     useEffect(() => {
-        if (withWeb() <= 1024) {
+        if (withWeb() <= 375) {
             dispatch(setIsShowSideBar(false))
         }
     }, [])
