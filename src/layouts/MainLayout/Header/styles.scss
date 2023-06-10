@@ -1,3 +1,8 @@
 .ant-popover-inner {
-    border-radius: 5px;
+    border-radius: 4px;
+    background-color: #2F4858;
+}
+
+.ant-popover-arrow-content::before {
+    background-color: #2F4858;
 }

@@ -3,6 +3,7 @@ import './styles.scss'
 import styles from './styles.module.scss';
 import SideBar from './SideBar';
 import Header from './Header';
+import Footer from './Footer';
 import {useDispatch, useSelector} from "react-redux";
 import {setIsShowSideBar} from "../../state/modules/app";
 import BreadCrumb from "./BreadCrumb";
@@ -15,7 +16,7 @@ const MainLayout = (props) => {
 
     /* Hook */
     useEffect(() => {
-        if (withWeb() <= 1200) {
+        if (withWeb() <= 1024) {
             dispatch(setIsShowSideBar(false))
         }
     }, [])
@@ -32,22 +33,27 @@ const MainLayout = (props) => {
     }
 
 	return (
-		<div className={styles.mainLayoutWrap}>
-            <SideBar
-                isShowSideBar={isShowSideBar}
-                handleToggleIsShowSideBar={() => dispatch(setIsShowSideBar(!isShowSideBar))}
-            />
-            <div className={`${styles.mainWrap} ${!isShowSideBar ? styles.mainWrapWithConditionSideBarClose : ''}`}>
-                <Header
+        <div className={styles.boxMainLayout}>
+            <div className={styles.headerBox}></div>
+            <div className={styles.mainLayoutWrap}>
+                <SideBar
                     isShowSideBar={isShowSideBar}
                     handleToggleIsShowSideBar={() => dispatch(setIsShowSideBar(!isShowSideBar))}
                 />
-                <main className={styles.mainContentWrap}>
-                    { breadcrumb && breadcrumb.length > 1 ? <BreadCrumb breadcrumb={breadcrumb} /> : '' }
-                    {props.children}
-                </main>
+                <div className={`${styles.mainWrap} ${!isShowSideBar ? styles.mainWrapWithConditionSideBarClose : ''}`}>
+                    <Header
+                        isShowSideBar={isShowSideBar}
+                        handleToggleIsShowSideBar={() => dispatch(setIsShowSideBar(!isShowSideBar))}
+                    />
+                    <main className={styles.mainContentWrap}>
+                        { breadcrumb && breadcrumb.length > 1 ? <BreadCrumb breadcrumb={breadcrumb} /> : '' }
+                        {props.children}
+                    </main>
+                    <Footer />
+                </div>
             </div>
-		</div>
+            <div className={styles.footerBox}></div>
+        </div>
 	);
 }
 
