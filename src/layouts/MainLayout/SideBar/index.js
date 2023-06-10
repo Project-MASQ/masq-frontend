@@ -16,6 +16,7 @@ import {
 } from "@ant-design/icons";
 import Logo from 'assets/images/Logo/zent_logo_light.png';
 import IconLogo from 'assets/images/Logo/icon-zent-v2.png';
+import {setIsShowSideBar} from "../../../state/modules/app";
 
 SideBar.prototype = {
     isShowSideBar: PropTypes.bool.isRequired,
@@ -30,6 +31,7 @@ function SideBar (props) {
     const currentRoute = useSelector(state => state.location.type);
     const [indexMenuItemSelect, setIndexMenuItemSelect] = useState(null);
     const [indexMenuSubItemSelect, setIndexMenuSubItemSelect] = useState(null);
+    const isShowSideBar = useSelector(state => state.app.isShowSideBar);
 
     const dispatch = useDispatch();
 
@@ -59,39 +61,23 @@ function SideBar (props) {
             route: ROUTE_HOME,
             routeActive: [ROUTE_HOME],
         },
-        {
-            label: 'Nhân viên',
-            type: "GROUP"
-        },
         // {
         //     label: 'Quản lý nhân viên',
-        //     icon: <TeamOutlined />,
+        //     icon: <AppstoreOutlined />,
         //     route: null,
-        //     routeActive: [ROUTE_EMPLOY, ROUTE_EMPLOY_1, ROUTE_EMPLOY_2],
+        //     routeActive: [ROUTE_EMPLOY],
         //     children: [
         //         {
         //             label: 'Danh sách nhân viên',
-        //             icon: <UsergroupAddOutlined />,
+        //             icon: '',
         //             route: ROUTE_EMPLOY,
         //             routeActive: [ROUTE_EMPLOY],
         //         },
         //         {
         //             label: 'Nhân viên',
         //             route: null,
-        //             icon: <UserOutlined />,
-        //             routeActive: [ROUTE_EMPLOY_1, ROUTE_EMPLOY_2],
-        //             children: [
-        //                 {
-        //                     label: 'Nhân viên 1',
-        //                     icon: <UserAddOutlined />,
-        //                     route: ROUTE_EMPLOY_1,
-        //                 },
-        //                 {
-        //                     label: 'Nhân viên 2',
-        //                     icon: <UserDeleteOutlined />,
-        //                     route: ROUTE_EMPLOY_2,
-        //                 }
-        //             ],
+        //             icon: '',
+        //             routeActive: [ROUTE_EMPLOY, ROUTE_EMPLOY]
         //         },
         //     ]
         // },
@@ -252,6 +238,13 @@ function SideBar (props) {
                         })
                     }
                 </ul>
+            </div>
+
+            <div className={`${styles.btnToggleIsShowSideBar} ${!isShowSideBar ? styles.btnToggleIsHideSideBar : ''}`}>
+                <svg onClick={() => dispatch(setIsShowSideBar(!isShowSideBar))} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5.5 7.5 8l6 7.5" stroke="#fff"/>
+                    <path d="M8.5.5 2.5 8l6 7.5" stroke="#fff"/>
+                </svg>
             </div>
         </div>
     );

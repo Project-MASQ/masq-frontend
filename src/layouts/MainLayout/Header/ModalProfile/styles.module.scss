@@ -1,34 +1,9 @@
 .modalInfoWrap {
     margin: -12px -16px;
-    min-width: 230px;
-
-    .headerModalInfoWrap {
-        padding: 15px;
-        border-bottom: 1px solid #F4F4F4;
-        display: flex;
-        align-items: center;
-
-        .contentHeaderModalInfoWrap {
-            margin-left: 15px;
-            font-size: 16px;
-
-            p {
-                margin: 0;
-            }
-
-            .name {
-                font-weight: 500;
-            }
-
-            .description {
-                font-size: 14px;
-                color: #A1A5B7;
-            }
-        }
-    }
+    min-width: 177px;
 
     .mainModalInfoWrap {
-        padding: 15px;
+        padding: 16px 12px 0;
 
         .menuInfoWrap {
             list-style: none;
@@ -37,16 +12,18 @@
             border: 10px;
 
             .itemInfoWrap {
-                padding: 10px;
                 border-radius: 5px;
                 cursor: pointer;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 14px;
                 transition: all 0.3s;
-
-                &:hover {
-                    background-color: #F9F9F9;
-                    color: #009ef7;
+                color: #fff;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 16px;
+                .text {
+                    margin-left: 10px;
                 }
             }
         }

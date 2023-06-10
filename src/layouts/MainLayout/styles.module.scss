@@ -1,5 +1,25 @@
 @import "../../assets/scss/variables";
+.boxMainLayout {
+    background-color: #f2f4f7;
+    background-image: url("../../../src/assets/images/Background/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .headerBox {
+        height: 60px;
+        background: #ffffff;
+        margin-bottom: -60px;
+    }
+
+    .footerBox {
+        height: 60px;
+        background: #2F4858;
+        margin-top: -60px;
+    }
+}
 .mainLayoutWrap {
+    max-width: 1024px;
+    margin: auto;
     .mainWrap {
         width: calc(100% - 250px);
         margin-left: 250px;
@@ -7,9 +27,9 @@
         height: 100vh;
 
         .mainContentWrap {
-            height: calc(100% - 70px);
+            height: calc(100% - 60px - 60px);
             overflow-y: auto;
-            background-color: #f2f4f7;
+            background-color: #f2f4f700;
             padding: 10px 15px;
 
             &::-webkit-scrollbar {
@@ -33,7 +53,7 @@
         margin-left: 64px;
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1024px) {
         .mainWrap {
             width: calc(100% - 64px);
             margin-left: 64px;
