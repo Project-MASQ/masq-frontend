@@ -1,6 +1,17 @@
 import React from 'react';
 import styles from "./styles.module.scss";
 import {Col, Row} from "antd";
+import PropTypes from 'prop-types';
+
+ShowInformation.property = {
+    handleShowEdit: PropTypes.func.isRequired
+}
+
+ShowInformation.defaultProps = {
+    handleShowEdit: () => {
+        alert('Function handleShowEdit does not exist !')
+    }
+}
 
 function ShowInformation (props) {
     return(
