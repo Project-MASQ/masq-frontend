@@ -28,7 +28,7 @@ function HomePage () {
 
   return (
     <MainLayout>
-      <div className={`p-[80px]`}>
+      <div className={`pt-[50px] pl-[42px]`}>
           <div className={`uppercase text-3xl font-medium leading-10`}>
               Welcome back, <br/>
               Lien To
